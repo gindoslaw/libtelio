@@ -1,13 +1,12 @@
 # Teliod
 
-Teliod is small Meshnet and VPN application, designed to be used in standalone
-and embedded environments.
+Teliod is small Meshnet and VPN application, designed to be used in small standalone and embedded environments.
 
 ## Building Teliod
 
 For typical Linux environment it might be built using simply:
 
-```cargo build```
+```BYPASS_LLT_SECRETS=1 cargo build```
 
 For OpenWRT you might need a bit more complex command, including your router architecture
 and the fact the OpenWRT is MUSLE-based, for example:
