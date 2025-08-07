@@ -694,7 +694,7 @@ async fn consolidate_firewall<F: Firewall>(
 ) -> Result {
     telio_log_debug!("⛔️ consolidate_firewall ENTER");
     let from_keys_ports_whitelist: HashSet<PublicKey> =
-        firewall.get_port_whitelist().keys().copied().collect();
+        firewall.get_port_whitelist().into_keys().collect();
 
     telio_log_debug!("⛔️ consolidate_firewall is_vpn_exit_node");
     // VPN peer must always be peer-whitelisted
