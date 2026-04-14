@@ -66,7 +66,7 @@ return view.extend({
     },
 
     handleSave: async function () {
-        if (!this.vpn_option.isValid()) {
+        if (!this.vpn_option.isValid('config')) {
             ui.addNotification(_('Save failed'), E('p', _('Incorrect format of the country code')));
             return
         }
